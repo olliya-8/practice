@@ -9,437 +9,484 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
     <script>
         tailwind.config = { important: true }
     </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="overflow-x-hidden overflow-y-auto">
-    <!--HEADER-->
-    <header
-        class="sticky w-full top-0 z-50 h-[76px] bg-white font-[Figtree] flex flex-row justify-between items-center border-b border-gray-200 px-4 md:px-8 lg:px-16">
-        <h2
-            class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 transform transition-all duration-300 hover:scale-105 cursor-pointer">
-            Estate Guide Blog</h2>
-        <nav
-            class="lg:text-[18px] max-lg:hidden text-gray-600 flex flex-row items-center lg:gap-10 text-[#171717] md:text-base md:gap-2 sm:text-base sm:gap-2">
-            <a href="#" class="hover:text-black">Home</a>
-            <a href="#" class="hover:text-black">Blog</a>
-            <a href="#" class="hover:text-black">Categories</a>
-            <a href="#" class="hover:text-black">About</a>
-            <a href="#" class="hover:text-black">Contact</a>
-            <span
-                class="inline-flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-200 transition-colors duration-300 cursor-pointer">
-                <svg id="theme-icon-moon" class="h-5 w-5 block dark:hidden" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+<body class="overflow-x-hidden overflow-y-auto"></body>
+<header
+    class="sticky w-full top-0 z-50 h-[76px] bg-white font-[Figtree] flex flex-row justify-between items-center border-b border-gray-200 px-4 md:px-8 lg:px-16">
+    <h2
+        class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 transform transition-all duration-300 hover:scale-105 cursor-pointer">
+        Estate Guide Blog</h2>
+    <nav
+        class="lg:text-[18px] max-lg:hidden text-gray-600 flex flex-row items-center lg:gap-10 text-[#171717] md:text-base md:gap-2 sm:text-base sm:gap-2">
+        <a href="index.html" class="hover:text-black">Home</a>
+        <a href="blog.html" class="hover:text-black">Blog</a>
+        <a href="categories.html" class="hover:text-black">Categories</a>
+        <a href="about.html" class="hover:text-black">About</a>
+        <a href="contact.html" class="hover:text-black">Contact</a>
+        <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-200 transition-colors duration-300 cursor-pointer">
+            <svg id="theme-icon-moon" class="h-5 w-5 block dark:hidden" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                </path>
+            </svg>
+        </span>
+        <a href="login.html" class="border border-gray-300 rounded px-2 py-1 w-[70px] h-[35px] hover:bg-gray-50">Login</a>
+    </nav>
+    <button id="menu-toggle" class="lg:hidden">
+        <svg id="hamburger-icon" class="h-5 w-5" fill="none" stroke="#000000" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+            </path>
+        </svg>
+        <svg id="close-icon" class="h-5 w-5 hidden" fill="none" stroke="#000000" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+            </path>
+        </svg>
+    </button>
+</header>
+
+<!-- Mobile Menu -->
+<nav id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-4 py-4">
+    <div class="flex flex-col gap-4">
+        <a href="index.html" class="hover:text-black text-gray-600">Home</a>
+        <a href="blog.html" class="hover:text-black text-gray-600">Blog</a>
+        <a href="categories.html" class="hover:text-black text-gray-600">Categories</a>
+        <a href="about.html" class="hover:text-black text-gray-600">About</a>
+        <a href="contact.html" class="hover:text-black text-gray-600">Contact</a>
+        <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-200 transition-colors duration-300 cursor-pointer">
+            <svg class="h-5 w-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                </path>
+            </svg>
+        </span>
+        <a href="login.html"
+            class="border border-gray-300 rounded px-2 py-1 w-[70px] h-[35px] hover:bg-gray-50 text-center">Login</a>
+    </div>
+</nav>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    menuToggle.addEventListener('click', function () {
+        mobileMenu.classList.toggle('hidden');
+        hamburgerIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+    });
+</script>
+<!--HERO SECTION-->
+<section
+    class="w-full max-md:h-[500px] md:h-screen bg-[#E5DDEF] px-4 md:px-8 lg:px-16 py-12 md:py-16 lg:py-20 relative overflow-hidden flex flex-col justify-center">
+    <button class="hidden lg:block absolute w-32 h-32 rounded-full bg-[#73CBED4C] top-12 left-8"></button>
+
+    <div class="flex justify-center md:justify-start md:ml-[10%] lg:ml-[25%] mb-6 md:mb-8 relative z-10">
+        <p class="px-4 py-2 whitespace-nowrap flex items-center bg-white rounded-full font-bold text-xs md:text-sm">
+            <svg class="w-3 h-3 md:w-4 md:h-4 text-purple-600 animate-pulse mr-2" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                </path>
+            </svg>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 animate-pulse">
+                Welcome to modern Blog
+            </span>
+        </p>
+    </div>
+
+    <h1
+        class="text-4xl md:text-6xl lg:text-8xl font-[Fitgree] leading-tight text-center md:text-left md:ml-[10%] lg:ml-[15%] mb-4 md:mb-6 relative z-10">
+        Share Your <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-600">Story
+        </span><br>With The World
+    </h1>
+
+    <p
+        class="text-gray-500 text-sm md:text-lg lg:text-xl text-center md:text-left md:ml-[10%] lg:ml-[15%] mb-8 md:mb-12 px-4 md:px-0 relative z-10">
+        Discover insightful articles, tutorials, and thoughts from passionate writers across technology, design, and
+        business.
+    </p>
+
+    <div
+        class="flex flex-col md:flex-row items-center gap-4 justify-center md:justify-start md:ml-[10%] lg:ml-[15%] relative z-10">
+        <button
+            class="group w-full md:w-auto px-6 py-3 rounded-2xl bg-violet-700 hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-600 text-white text-base md:text-lg flex items-center justify-center transition-all duration-300 cursor-pointer">
+            <span class="group-hover:opacity-0 transition-opacity duration-300 flex items-center">
+                Explore Articles
+                <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
                     </path>
                 </svg>
             </span>
-            <a href="#" class="border border-gray-300 rounded px-2 py-1 w-[70px] h-[35px] hover:bg-gray-50">Login</a>
-        </nav>
-        <p class="lg:hidden">
-            <svg id="menu-icon" class="h-5 w-5" fill="none" stroke="#000000" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+        </button>
+        <button
+            class="w-full md:w-auto px-6 py-3 bg-white text-black text-base md:text-lg rounded-2xl transform transition-all duration-300 hover:scale-105 cursor-pointer">
+            Learn More
+        </button>
+    </div>
+
+    <button class="hidden lg:block absolute w-32 h-32 rounded-full bg-pink-200 bottom-12 right-8"></button>
+</section>
+
+<!--CARDS SECTION-->
+<section class="w-full min-h-screen bg-white py-16 md:py-20 px-4 md:px-8 lg:px-16">
+    <h1 class="text-3xl md:text-4xl lg:text-5xl text-black text-center mb-12 md:mb-16">
+        Popular <span class="text-blue-600">Categories</span>
+    </h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div
+            class="border border-gray-200 rounded-xl p-8 hover:border-blue-400 transition-all duration-300 hover:shadow-lg flex flex-col justify-center items-center text-center min-h-[226px]">
+            <a href="blog.html" class="font-bold text-lg md:text-xl text-black hover:text-blue-400 mb-2">
+                Core Dictionary & phrase Books
+            </a>
+            <span class="text-gray-400 text-sm">12 articles</span>
+        </div>
+        <div
+            class="border border-gray-200 rounded-xl p-8 hover:border-blue-400 transition-all duration-300 hover:shadow-lg flex flex-col justify-center items-center text-center min-h-[226px]">
+            <a href ="blog.html" class="font-bold text-lg md:text-xl text-black hover:text-blue-400 mb-2">
+                Health & medical vocabulary
+            </a>
+            <span class="text-gray-400 text-sm">8 articles</span>
+        </div>
+        <div
+            class="border border-gray-200 rounded-xl p-8 hover:border-blue-400 transition-all duration-300 hover:shadow-lg flex flex-col justify-center items-center text-center min-h-[226px]">
+            <a href ="blog.html" class="font-bold text-lg md:text-xl text-black hover:text-blue-400 mb-2">
+                Education & Scolorhsips
+            </a>
+            <span class="text-gray-400 text-sm">15 articles</span>
+        </div>
+        <div
+            class="border border-gray-200 rounded-xl p-8 hover:border-blue-400 transition-all duration-300 hover:shadow-lg flex flex-col justify-center items-center text-center min-h-[226px]">
+           <a href ="blog.html" class="font-bold text-lg md:text-xl text-black hover:text-blue-400 mb-2">
+                Technology & IT jobs
+            </a>
+            <span class="text-gray-400 text-sm">20 articles</span>
+        </div>
+    </div>
+</section>
+<section class="w-full min-h-screen bg-gray-100 py-12 md:py-16 lg:py-20 px-4 md:px-8 lg:px-16">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl text-black font-bold mb-8 md:mb-12">
+        Latest <span class="text-blue-600">Articles</span>
+    </h2>
+
+    <!-- Articles Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto mb-12">
+        <!-- Card 1 -->
+        <div
+            class="bg-white border rounded-xl transition-transform duration-300 hover:scale-105 overflow-hidden flex flex-col">
+            <img src="assets/img1.jpg" class="w-full h-56 object-cover">
+
+            <div class="p-6 flex flex-col flex-1">
+                <div class="flex items-start justify-between mb-4 gap-2">
+                    <a href="blog.html" class="border rounded-full text-xs md:text-sm font-bold px-3 py-2 flex-1">
+                        Exams & Certification English (IELTS/TOEFL/PTE/CELPIP)
+                    </a>
+                    <span class="text-gray-400 text-xs whitespace-nowrap">8 min read</span>
+                </div>
+
+                <h3
+                    class="hover:text-blue-600 text-black text-lg md:text-xl font-bold leading-tight mb-3 cursor-pointer">
+                    PTE Speaking 'Repeat Sentence': Proven English Techniques Nobody Teaches
+                </h3>
+
+                <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-5">
+                    Learn practical TOEFL Reading hacks to understand academic English faster. Speed up
+                    comprehension, identify key ideas quickly, and apply smart strategies that improve...
+                </p>
+
+                <div class="flex items-center gap-3 mt-auto">
+                    <img src="assets/img10.png" class="w-10 h-10 rounded-full">
+                    <div>
+                        <h4 class="text-sm font-semibold">Admin</h4>
+                        <p class="text-xs text-gray-500">Nov 13, 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+            class="bg-white border rounded-xl transition-transform duration-300 hover:scale-105 overflow-hidden flex flex-col">
+            <img src="assets/img2.jpg" class="w-full h-56 object-cover">
+
+            <div class="p-6 flex flex-col flex-1">
+                <div class="flex items-start justify-between mb-4 gap-2">
+                    <a href= "blog.html" class="border rounded-full text-xs md:text-sm font-bold px-3 py-2 flex-1">
+                        Exams & Certification English (IELTS/TOEFL/PTE/CELPIP)
+                    </a>
+                    <span class="text-gray-400 text-xs whitespace-nowrap">9 min read</span>
+                </div>
+
+                <h3
+                    class="hover:text-blue-600 text-black text-lg md:text-xl font-bold leading-tight mb-3 cursor-pointer">
+                    TOEFL reading hacks: How to Understand Academic English Faster
+                </h3>
+
+                <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-5">
+                    Learn practical TOEFL Reading hacks to understand academic English faster. Speed up
+                    comprehension, identify key ideas quickly, and apply smart strategies that improve...
+                </p>
+
+                <div class="flex items-center gap-3 mt-auto">
+                    <img src="assets/img10.png" class="w-10 h-10 rounded-full">
+                    <div>
+                        <h4 class="text-sm font-semibold">Admin</h4>
+                        <p class="text-xs text-gray-500">Nov 13, 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+            class="bg-white border rounded-xl transition-transform duration-300 hover:scale-105 overflow-hidden flex flex-col">
+            <img src="assets/img3.jpg" class="w-full h-56 object-cover">
+
+            <div class="p-6 flex flex-col flex-1">
+                <div class="flex items-start justify-between mb-4 gap-2">
+                    <a href="blog.html" class="border rounded-full text-xs md:text-sm font-bold px-3 py-2 flex-1">
+                        Exams & Certification English (IELTS/TOEFL/PTE/CELPIP)
+                    </a>
+                    <span class="text-gray-400 text-xs whitespace-nowrap">8 min read</span>
+                </div>
+
+                <h3
+                    class="hover:text-blue-600 text-black text-lg md:text-xl font-bold leading-tight mb-3 cursor-pointer">
+                    IELTS Writing Task 2: High-Scoring English Structures Explained in Urdu
+                </h3>
+
+                <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-5">
+                    Learn high-scoring IELTS Writing Task 2 structures explained clearly in Urdu. Understand
+                    advanced sentence patterns, essay organization, and examiner-friendly vocabulary to boost your
+                    band score fast.
+                </p>
+
+                <div class="flex items-center gap-3 mt-auto">
+                    <img src="assets/img10.png" class="w-10 h-10 rounded-full">
+                    <div>
+                        <h4 class="text-sm font-semibold">Admin</h4>
+                        <p class="text-xs text-gray-500">Nov 13, 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+            class="bg-white border rounded-xl transition-transform duration-300 hover:scale-105 overflow-hidden flex flex-col">
+            <img src="assets/img4.jpg" class="w-full h-56 object-cover">
+
+            <div class="p-6 flex flex-col flex-1">
+                <div class="flex items-start justify-between mb-4 gap-2">
+                    <a href="blog.html" class="border rounded-full text-xs md:text-sm font-bold px-3 py-2 flex-1">
+                        Exams & Certification English (IELTS/TOEFL/PTE/CELPIP)
+                    </a>
+                    <span class="text-gray-400 text-xs whitespace-nowrap">8 min read</span>
+                </div>
+
+                <h3
+                    class="hover:text-blue-600 text-black text-lg md:text-xl font-bold leading-tight mb-3 cursor-pointer">
+                    CELPIP Speaking Mistakes Most Applicants Make — And How to Fix Them
+                </h3>
+
+                <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-5">
+                    Discover the most common CELPIP Speaking mistakes applicants make—and how to fix them fast.
+                    Learn practical strategies, clearer responses, and score-boosting techniques to improve fluency,
+                    coherence, and task completion.
+                </p>
+
+                <div class="flex items-center gap-3 mt-auto">
+                    <img src="assets/img10.png" class="w-10 h-10 rounded-full">
+                    <div>
+                        <h4 class="text-sm font-semibold">Admin</h4>
+                        <p class="text-xs text-gray-500">Nov 13, 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+            class="bg-white border rounded-xl transition-transform duration-300 hover:scale-105 overflow-hidden flex flex-col">
+            <img src="assets/img5.jpg" class="w-full h-56 object-cover">
+
+            <div class="p-6 flex flex-col flex-1">
+                <div class="flex items-start justify-between mb-4 gap-2">
+                    <a href="blog.html" class="border rounded-full text-xs md:text-sm font-bold px-3 py-2 flex-1">
+                        Exams & Certification English (IELTS/TOEFL/PTE/CELPIP)
+                    </a>
+                    <span class="text-gray-400 text-xs whitespace-nowrap">9 min read</span>
+                </div>
+
+                <h3
+                    class="hover:text-blue-600 text-black text-lg md:text-xl font-bold leading-tight mb-3 cursor-pointer">
+                    PTE Exam English: 20 Sentence Templates That Boost Your Score Instantly
+                </h3>
+
+                <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-5">
+                    Boost your PTE Academic score with 20 powerful sentence templates for speaking and writing.
+                    Designed to improve clarity, structure, and fluency instantly—perfect for fast, score-focused
+                    preparation.
+                </p>
+
+                <div class="flex items-center gap-3 mt-auto">
+                    <img src="assets/img10.png" class="w-10 h-10 rounded-full">
+                    <div>
+                        <h4 class="text-sm font-semibold">Admin</h4>
+                        <p class="text-xs text-gray-500">Nov 13, 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div
+            class="bg-white border rounded-xl transition-transform duration-300 hover:scale-105 overflow-hidden flex flex-col">
+            <img src="assets/img3.jpg" class="w-full h-56">
+
+            <div class="p-6 flex flex-col flex-1">
+                <div class="flex items-start justify-between mb-4 gap-2">
+                    <a href="blog.html" class="border rounded-full text-xs md:text-sm font-bold px-3 py-2 flex-1">
+                        Exams & Certification English (IELTS/TOEFL/PTE/CELPIP)
+                    </a>
+                    <span class="text-gray-400 text-xs whitespace-nowrap">8 min read</span>
+                </div>
+
+                <h3
+                    class="hover:text-blue-600 text-black text-lg md:text-xl font-bold leading-tight mb-3 cursor-pointer">
+                    IELTS Writing Task 2: High-Scoring English Structures Explained in Urdu
+                </h3>
+
+                <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-5">
+                    Learn high-scoring IELTS Writing Task 2 structures explained clearly in Urdu. Understand
+                    advanced sentence patterns, essay organization, and examiner-friendly vocabulary to boost your
+                    band score fast.
+                </p>
+
+                <div class="flex items-center gap-3 mt-auto">
+                    <img src="assets/img10.png" class="w-10 h-10 rounded-full">
+                    <div>
+                        <h4 class="text-sm font-semibold">Admin</h4>
+                        <p class="text-xs text-gray-500">Nov 13, 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-700">
+        <p class="text-sm md:text-base">
+            Showing <span class="font-bold">1</span> to <span class="font-bold">9</span> of 16 results
+        </p>
+        <div class="flex items-center border border-gray-300 rounded overflow-hidden">
+            <button class="p-2 hover:bg-gray-100 transition-colors">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                        d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <a href="#" class="px-4 py-2 hover:bg-gray-100 border-l border-r border-gray-300 transition-colors">1</a>
+            <a href="#" class="px-4 py-2 hover:bg-gray-100 border-r border-gray-300 transition-colors">2</a>
+            <button class="p-2 hover:bg-gray-100 transition-colors">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+<!-- Footer content section -->
+<footer class="w-full border-t border-gray-300 mt-8">
+
+    <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 font-bold grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div class="sm:mt-4 lg:mt-0">
+            <h2 class="text-xl sm:text-2xl lg:text-[25px] text-purple-600 font-bold">Modern Blog</h2>
+            <p class="text-sm sm:text-base text-gray-600 pt-4 sm:pt-6">
+                Share your stories, tutorials, and insights with the world.
+            </p>
+        </div>
+
+
+        <div class="sm:mt-4 lg:mt-0">
+            <h2 class="font-bold text-black text-lg sm:text-xl">Quick Links</h2>
+            <ul class="text-gray-600 text-sm sm:text-base pt-4 sm:pt-6 space-y-2">
+                <li class="hover:translate-x-2 transition-transform duration-300 cursor-pointer">Disclaimer</li>
+                <li class="hover:translate-x-2 transition-transform duration-300 cursor-pointer">Privacy Policy</li>
+                <li class="hover:translate-x-2 transition-transform duration-300 cursor-pointer">Terms & Conditions
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="sm:mt-4 lg:mt-0">
+            <h2 class="font-bold text-black text-lg sm:text-xl">Categories</h2>
+            <ul class="text-gray-600 text-sm sm:text-base pt-4 sm:pt-6 space-y-2">
+                <li class="hover:translate-x-2 transition-transform duration-300 cursor-pointer">Technology</li>
+                <li class="hover:translate-x-2 transition-transform duration-300 cursor-pointer">Design</li>
+                <li class="hover:translate-x-2 transition-transform duration-300 cursor-pointer">Business</li>
+            </ul>
+        </div>
+
+
+        <div class="sm:mt-4 lg:mt-0">
+    <h2 class="font-bold text-black text-lg sm:text-xl">Connect</h2>
+    <div class="flex gap-4 pt-4">
+        <a href="https://twitter.com/estateguide" class="cursor-pointer hover:text-purple-600 transition-colors duration-300">
+            <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
                 </path>
             </svg>
-        </p>
-    </header>
-
-    <!--HERO SECTION-->
-    <section
-        class="w-full max-md:h-[500px] md:h-screen bg-[#E5DDEF] px-4 md:px-8 lg:px-16 py-12 md:py-16 lg:py-20 relative overflow-hidden flex flex-col justify-center">
-        <button class="hidden lg:block absolute w-32 h-32 rounded-full bg-[#73CBED4C] top-12 left-8"></button>
-
-        <div class="flex justify-center md:justify-start md:ml-[10%] lg:ml-[25%] mb-6 md:mb-8 relative z-10">
-            <p class="px-4 py-2 whitespace-nowrap flex items-center bg-white rounded-full font-bold text-xs md:text-sm">
-                <svg class="w-3 h-3 md:w-4 md:h-4 text-purple-600 animate-pulse mr-2" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
-                    </path>
-                </svg>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 animate-pulse">
-                    Welcome to modern Blog
-                </span>
-            </p>
-        </div>
-
-        <h1
-            class="text-4xl md:text-6xl lg:text-8xl font-[Fitgree] leading-tight text-center md:text-left md:ml-[10%] lg:ml-[15%] mb-4 md:mb-6 relative z-10">
-            Share Your <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-600">Story
-            </span><br>With The World
-        </h1>
-
-        <p
-            class="text-gray-500 text-sm md:text-lg lg:text-xl text-center md:text-left md:ml-[10%] lg:ml-[15%] mb-8 md:mb-12 px-4 md:px-0 relative z-10">
-            Discover insightful articles, tutorials, and thoughts from passionate writers across technology, design, and
-            business.
-        </p>
-
-        <div
-            class="flex flex-col md:flex-row items-center gap-4 justify-center md:justify-start md:ml-[10%] lg:ml-[15%] relative z-10">
-            <button
-                class="group w-full md:w-auto px-6 py-3 rounded-2xl bg-violet-700 hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-600 text-white text-base md:text-lg flex items-center justify-center transition-all duration-300 cursor-pointer">
-                <span class="group-hover:opacity-0 transition-opacity duration-300 flex items-center">
-                    Explore Articles
-                    <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3">
-                        </path>
-                    </svg>
-                </span>
-            </button>
-            <button
-                class="w-full md:w-auto px-6 py-3 bg-white text-black text-base md:text-lg rounded-2xl transform transition-all duration-300 hover:scale-105 cursor-pointer">
-                Learn More
-            </button>
-        </div>
-
-        <button class="hidden lg:block absolute w-32 h-32 rounded-full bg-pink-200 bottom-12 right-8"></button>
-    </section>
-
-    <!--CARDS SECTION-->
-    <section class="w-full min-h-screen bg-white py-16 md:py-20 px-4 md:px-8 lg:px-16">
-        <h1 class="text-3xl md:text-4xl lg:text-5xl text-black text-center mb-12 md:mb-16">
-            Popular <span class="text-blue-600">Categories</span>
-        </h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            <div
-                class="border border-gray-200 rounded-xl p-8 hover:border-blue-400 transition-all duration-300 hover:shadow-lg flex flex-col justify-center items-center text-center min-h-[226px]">
-                <p class="font-bold text-lg md:text-xl text-black hover:text-blue-400 mb-2">
-                    Core Dictionary & phrase Books
-                </p>
-                <span class="text-gray-400 text-sm">12 articles</span>
-            </div>
-            <div
-                class="border border-gray-200 rounded-xl p-8 hover:border-blue-400 transition-all duration-300 hover:shadow-lg flex flex-col justify-center items-center text-center min-h-[226px]">
-                <p class="font-bold text-lg md:text-xl text-black hover:text-blue-400 mb-2">
-                    Health & medical vocabulary
-                </p>
-                <span class="text-gray-400 text-sm">8 articles</span>
-            </div>
-            <div
-                class="border border-gray-200 rounded-xl p-8 hover:border-blue-400 transition-all duration-300 hover:shadow-lg flex flex-col justify-center items-center text-center min-h-[226px]">
-                <p class="font-bold text-lg md:text-xl text-black hover:text-blue-400 mb-2">
-                    Education & Scholarships
-                </p>
-                <span class="text-gray-400 text-sm">15 articles</span>
-            </div>
-            <div
-                class="border border-gray-200 rounded-xl p-8 hover:border-blue-400 transition-all duration-300 hover:shadow-lg flex flex-col justify-center items-center text-center min-h-[226px]">
-                <p class="font-bold text-lg md:text-xl text-black hover:text-blue-400 mb-2">
-                    Technology & IT job English
-                </p>
-                <span class="text-gray-400 text-sm">20 articles</span>
-            </div>
-        </div>
-    </section>
-    <section class="w-full min-h-screen bg-gray-100 py-12 md:py-16 lg:py-20 px-4 md:px-8 lg:px-16">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl text-black font-bold mb-8 md:mb-12">
-            Latest <span class="text-blue-600">Articles</span>
-        </h2>
-
-        <!-- Articles Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto mb-12">
-            <!-- Card 1 -->
-            <div class="bg-white border rounded-xl transition-transform duration-300 hover:scale-105 overflow-hidden">
-                <img src="assets/img1.jpg" class="w-full h-56 object-cover">
-
-                <div class="p-6">
-                    <div class="flex items-start justify-between mb-4 gap-2">
-                        <p class="border rounded-full text-xs md:text-sm font-bold px-3 py-2 flex-1">
-                            Exams & Certification English (IELTS/TOEFL/PTE/CELPIP)
-                        </p>
-                        <span class="text-gray-400 text-xs whitespace-nowrap">8 min read</span>
-                    </div>
-
-                    <h3
-                        class="hover:text-blue-600 text-black text-lg md:text-xl font-bold leading-tight mb-3 cursor-pointer">
-                        PTE Speaking 'Repeat Sentence': Proven English Techniques Nobody Teaches
-                    </h3>
-
-                    <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-5">
-                        Learn practical TOEFL Reading hacks to understand academic English faster. Speed up
-                        comprehension, identify key ideas quickly, and apply smart strategies that improve...
-                    </p>
-
-                    <div class="flex items-center gap-3">
-                        <img src="assets/img10.png" class="w-10 h-10 rounded-full">
-                        <div>
-                            <h4 class="text-sm font-semibold">Admin</h4>
-                            <p class="text-xs text-gray-500">Nov 13, 2025</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="bg-white border rounded-xl transition-transform duration-300 hover:scale-105 overflow-hidden">
-                <img src="assets/img2.jpg" class="w-full h-56 object-cover">
-
-                <div class="p-6">
-                    <div class="flex items-start justify-between mb-4 gap-2">
-                        <p class="border rounded-full text-xs md:text-sm font-bold px-3 py-2 flex-1">
-                            Exams & Certification English (IELTS/TOEFL/PTE/CELPIP)
-                        </p>
-                        <span class="text-gray-400 text-xs whitespace-nowrap">9 min read</span>
-                    </div>
-
-                    <h3
-                        class="hover:text-blue-600 text-black text-lg md:text-xl font-bold leading-tight mb-3 cursor-pointer">
-                        TOEFL reading hacks: How to Understand Academic English Faster
-                    </h3>
-
-                    <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-5">
-                        Learn practical TOEFL Reading hacks to understand academic English faster. Speed up
-                        comprehension, identify key ideas quickly, and apply smart strategies that improve...
-                    </p>
-
-                    <div class="flex items-center gap-3">
-                        <img src="assets/img10.png" class="w-10 h-10 rounded-full">
-                        <div>
-                            <h4 class="text-sm font-semibold">Admin</h4>
-                            <p class="text-xs text-gray-500">Nov 13, 2025</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="bg-white border rounded-xl transition-transform duration-300 hover:scale-105 overflow-hidden">
-                <img src="assets/img3.jpg" class="w-full h-56 object-cover">
-
-                <div class="p-6">
-                    <div class="flex items-start justify-between mb-4 gap-2">
-                        <p class="border rounded-full text-xs md:text-sm font-bold px-3 py-2 flex-1">
-                            Exams & Certification English (IELTS/TOEFL/PTE/CELPIP)
-                        </p>
-                        <span class="text-gray-400 text-xs whitespace-nowrap">8 min read</span>
-                    </div>
-
-                    <h3
-                        class="hover:text-blue-600 text-black text-lg md:text-xl font-bold leading-tight mb-3 cursor-pointer">
-                        IELTS Writing Task 2: High-Scoring English Structures Explained in Urdu
-                    </h3>
-
-                    <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-5">
-                        Learn high-scoring IELTS Writing Task 2 structures explained clearly in Urdu. Understand
-                        advanced sentence patterns, essay organization, and examiner-friendly vocabulary to boost your
-                        band score fast.
-                    </p>
-
-                    <div class="flex items-center gap-3">
-                        <img src="assets/img10.png" class="w-10 h-10 rounded-full">
-                        <div>
-                            <h4 class="text-sm font-semibold">Admin</h4>
-                            <p class="text-xs text-gray-500">Nov 13, 2025</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="bg-white border rounded-xl transition-transform duration-300 hover:scale-105 overflow-hidden">
-                <img src="assets/img4.jpg" class="w-full h-56 object-cover">
-
-                <div class="p-6">
-                    <div class="flex items-start justify-between mb-4 gap-2">
-                        <p class="border rounded-full text-xs md:text-sm font-bold px-3 py-2 flex-1">
-                            Exams & Certification English (IELTS/TOEFL/PTE/CELPIP)
-                        </p>
-                        <span class="text-gray-400 text-xs whitespace-nowrap">8 min read</span>
-                    </div>
-
-                    <h3
-                        class="hover:text-blue-600 text-black text-lg md:text-xl font-bold leading-tight mb-3 cursor-pointer">
-                        CELPIP Speaking Mistakes Most Applicants Make — And How to Fix Them
-                    </h3>
-
-                    <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-5">
-                        Discover the most common CELPIP Speaking mistakes applicants make—and how to fix them fast.
-                        Learn practical strategies, clearer responses, and score-boosting techniques to improve fluency,
-                        coherence, and task completion.
-                    </p>
-
-                    <div class="flex items-center gap-3">
-                        <img src="assets/img10.png" class="w-10 h-10 rounded-full">
-                        <div>
-                            <h4 class="text-sm font-semibold">Admin</h4>
-                            <p class="text-xs text-gray-500">Nov 13, 2025</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="bg-white border rounded-xl transition-transform duration-300 hover:scale-105 overflow-hidden">
-                <img src="assets/img5.jpg" class="w-full h-56 object-cover">
-
-                <div class="p-6">
-                    <div class="flex items-start justify-between mb-4 gap-2">
-                        <p class="border rounded-full text-xs md:text-sm font-bold px-3 py-2 flex-1">
-                            Exams & Certification English (IELTS/TOEFL/PTE/CELPIP)
-                        </p>
-                        <span class="text-gray-400 text-xs whitespace-nowrap">9 min read</span>
-                    </div>
-
-                    <h3
-                        class="hover:text-blue-600 text-black text-lg md:text-xl font-bold leading-tight mb-3 cursor-pointer">
-                        PTE Exam English: 20 Sentence Templates That Boost Your Score Instantly
-                    </h3>
-
-                    <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-5">
-                        Boost your PTE Academic score with 20 powerful sentence templates for speaking and writing.
-                        Designed to improve clarity, structure, and fluency instantly—perfect for fast, score-focused
-                        preparation.
-                    </p>
-
-                    <div class="flex items-center gap-3">
-                        <img src="assets/img10.png" class="w-10 h-10 rounded-full">
-                        <div>
-                            <h4 class="text-sm font-semibold">Admin</h4>
-                            <p class="text-xs text-gray-500">Nov 13, 2025</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="bg-white border rounded-xl transition-transform duration-300 hover:scale-105 overflow-hidden">
-                <img src="assets/img3.jpg" class="w-full h-56">
-
-                <div class="p-6">
-                    <div class="flex items-start justify-between mb-4 gap-2">
-                        <p class="border rounded-full text-xs md:text-sm font-bold px-3 py-2 flex-1">
-                            Exams & Certification English (IELTS/TOEFL/PTE/CELPIP)
-                        </p>
-                        <span class="text-gray-400 text-xs whitespace-nowrap">8 min read</span>
-                    </div>
-
-                    <h3
-                        class="hover:text-blue-600 text-black text-lg md:text-xl font-bold leading-tight mb-3 cursor-pointer">
-                        IELTS Writing Task 2: High-Scoring English Structures Explained in Urdu
-                    </h3>
-
-                    <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-5">
-                        Learn high-scoring IELTS Writing Task 2 structures explained clearly in Urdu. Understand
-                        advanced sentence patterns, essay organization, and examiner-friendly vocabulary to boost your
-                        band score fast.
-                    </p>
-
-                    <div class="flex items-center gap-3">
-                        <img src="assets/img10.png" class="w-10 h-10 rounded-full">
-                        <div>
-                            <h4 class="text-sm font-semibold">Admin</h4>
-                            <p class="text-xs text-gray-500">Nov 13, 2025</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Pagination -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-700">
-            <p class="text-sm md:text-base">
-                Showing <span class="font-bold">1</span> to <span class="font-bold">9</span> of 16 results
-            </p>
-            <div class="flex items-center border border-gray-300 rounded overflow-hidden">
-                <button class="p-2 hover:bg-gray-100 transition-colors">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd"
-                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </button>
-                <a href="#"
-                    class="px-4 py-2 hover:bg-gray-100 border-l border-r border-gray-300 transition-colors">1</a>
-                <a href="#" class="px-4 py-2 hover:bg-gray-100 border-r border-gray-300 transition-colors">2</a>
-                <button class="p-2 hover:bg-gray-100 transition-colors">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd"
-                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </section>
-    <!-- Footer content section -->
-    <footer class="w-full border-t border-gray-300 mt-8">
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 font-bold grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-            <div class="sm:mt-4 lg:mt-0">
-                <h2 class="text-xl sm:text-2xl lg:text-[25px] text-purple-600 font-bold">Modern Blog</h2>
-                <p class="text-sm sm:text-base text-gray-600 pt-4 sm:pt-6">
-                    Share your stories, tutorials, and insights with the world.
-                </p>
-            </div>
-
-
-            <div class="sm:mt-4 lg:mt-0">
-                <h2 class="font-bold text-black text-lg sm:text-xl">Quick Links</h2>
-                <ul class="text-gray-600 text-sm sm:text-base pt-4 sm:pt-6 space-y-2">
-                    <li class="hover:translate-x-2 transition-transform duration-300 cursor-pointer">Disclaimer</li>
-                    <li class="hover:translate-x-2 transition-transform duration-300 cursor-pointer">Privacy Policy</li>
-                    <li class="hover:translate-x-2 transition-transform duration-300 cursor-pointer">Terms & Conditions
-                    </li>
-                </ul>
-            </div>
-
-
-            <div class="sm:mt-4 lg:mt-0">
-                <h2 class="font-bold text-black text-lg sm:text-xl">Categories</h2>
-                <ul class="text-gray-600 text-sm sm:text-base pt-4 sm:pt-6 space-y-2">
-                    <li class="hover:translate-x-2 transition-transform duration-300 cursor-pointer">Technology</li>
-                    <li class="hover:translate-x-2 transition-transform duration-300 cursor-pointer">Design</li>
-                    <li class="hover:translate-x-2 transition-transform duration-300 cursor-pointer">Business</li>
-                </ul>
-            </div>
-
-
-            <div class="sm:mt-4 lg:mt-0">
-                <h2 class="font-bold text-black text-lg sm:text-xl">Connect</h2>
-                <div class="flex gap-4 pt-4">
-                    <span class="cursor-pointer hover:text-purple-600 transition-colors duration-300">
-                        <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
-                            </path>
-                        </svg>
-                    </span>
-                    <span class="cursor-pointer hover:text-purple-600 transition-colors duration-300">
-                        <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path fill-rule="evenodd"
-                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </span>
-                    <span class="cursor-pointer hover:text-purple-600 transition-colors duration-300">
-                        <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
-                            </path>
-                        </svg>
-                    </span>
-                    <span class="cursor-pointer hover:text-purple-600 transition-colors duration-300">
-                        <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                            </path>
-                        </svg>
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class="border-t border-gray-200 py-5 text-center">
-            <p class="text-gray-500 text-sm">© Copyright © 2025 All Reserved</p>
-        </div>
-    </footer>
+        </a>
+        <a href="https://github.com/estateguide" class="cursor-pointer hover:text-purple-600 transition-colors duration-300">
+            <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.84-2.35 4.69-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    clip-rule="evenodd"></path>
+            </svg>
+        </a>
+        <a href="https://linkedin.com/company/estateguide" class="cursor-pointer hover:text-purple-600 transition-colors duration-300">
+            <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
+                </path>
+            </svg>
+        </a>
+        <a href="mailto:contact@estateguide.com" class="cursor-pointer hover:text-purple-600 transition-colors duration-300">
+            <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                </path>
+            </svg>
+        </a>
+    </div>
+</div>
+    <div class="border-t border-gray-200 py-5 text-center">
+        <p class="text-gray-500 text-sm">© Copyright © 2025 All Reserved</p>
+    </div>
+</footer>
 
 </body>
 
